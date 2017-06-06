@@ -4,14 +4,11 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary
-This code repository demonstrates how bootstrap could be used to test the robustness of PCA
-* Version
-1.0
+* This code repository demonstrates how bootstrap could be used to test the robustness of PCA
+* Version 1.0
 
 ### How do I get set up? ###
-* Summary of set up
-Prepare your data in a pandas dataframe where the rows are observations and columns represent the variables you would like to perform the analysis on.
+* Prepare your data in a pandas dataframe where the rows are observations and columns represent the variables you would like to perform the analysis on.
 
 First you need to perform PCA to extract the eigenvectors. 
 You could use the provided function as:
@@ -35,13 +32,7 @@ numpy, pandas, matplotlib, statsmodels, tqdm, sklearn
 See example.py 
 * Deployment instructions
 Download the source code and use as appropriate for your application
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
 
 ### Who do I talk to? ###
-* Repo owner or admin
-Damianos Christophides
-chdamianos@gmail.com
+* Damianos Christophides
+* chdamianos@gmail.com
