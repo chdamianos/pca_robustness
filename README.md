@@ -50,6 +50,7 @@ data_temp is the data in a pandas dataframe where the rows are observations and 
 evs are the eigenvectors extracted using PCA
 
 n_boot_sample is the number of bootstrap samples to run
+
 confidence_interval is confidence interval i.e. 0.95 corresponds to a 95% confidence interval
 
 x_axis is the vector of values to be plotted on the x-axis
