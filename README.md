@@ -60,7 +60,10 @@ x_label is the label to be used for the x-axis of the plots
 
 fig_title is the title of the plot
 
+boot_output is a multidimensional array holding the data of the eigenvectors derived during the bootstrap process
 
+Below you can see an example of the graphical output
+![example.png](https://bitbucket.org/repo/5qdo54A/images/3988140297-example.png) 
 ### Who do I talk to? ###
 * Damianos Christophides
 * chdamianos@gmail.com
