@@ -12,7 +12,11 @@ This README would normally document whatever steps are necessary to get your app
 
 First you need to perform PCA to extract the eigenvectors. 
 You could use the provided function as:
+
+```
+#!python
 pcs, evs, explained_variance,mean_vector=PCA_bootstrap.PCA(np.array(data),0.98)
+```
 
 where 'data' is the dataframe 
 0.98 is the explained variance ratio threshold to keep only n-number of eigenvectors
