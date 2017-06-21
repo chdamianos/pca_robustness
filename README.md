@@ -29,12 +29,12 @@ from there variables we only need 'evs'
 
 np is the numpy library imported as 'import numpy as np'
 
-* Dependencies
+* Dependencies:
 You will need the following Python libraries
 numpy, pandas, matplotlib, statsmodels, tqdm, sklearn
-* How to run
+* How to run:
 See example.py 
-* Deployment instructions
+* Deployment instructions:
 Download the source code and use as appropriate for your application
 
 ### Output ###
