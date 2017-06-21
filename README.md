@@ -18,7 +18,7 @@ You could use the provided function as:
 pcs, evs, explained_variance,mean_vector=PCA_bootstrap.PCA(np.array(data),0.98)
 ```
 
-where 'data' is the dataframe 
+where 'data' is the dataframe, 
 0.98 is the explained variance ratio threshold used to keep only an n-number of eigenvectors
 
 'pcs' are the principal components for each observation
