@@ -74,6 +74,7 @@ Below you can see an example of the graphical output
 As you can see as the number of observations increases the mean eigenvector from the bootstrap has better agreement with the original eigenvectors
 
 Also the confidence intervals are smaller
+
 For more information go through example.py
 ### Who do I talk to? ###
 * Damianos Christophides
