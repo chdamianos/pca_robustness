@@ -22,10 +22,12 @@ where 'data' is the dataframe,
 0.98 is the explained variance ratio threshold used to keep only an n-number of eigenvectors
 
 'pcs' are the principal components for each observation
+
 'evs' are the eigenvectors
+
 'explained_variance' is the vector with the cumulative values of explained variance for each principal component
+
 'mean_vector' is the mean vector used to centralise the data
-from there variables we only need 'evs'
 
 np is the numpy library imported as 'import numpy as np'
 
