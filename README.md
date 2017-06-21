@@ -71,7 +71,7 @@ Below you can see an example of the graphical output
 
 ![example n=450.png](https://bitbucket.org/repo/5qdo54A/images/1293509323-example%20n=450.png)
 
-As you can see as the number of observations increases the mean eigenvector from the bootstrap has better agreement with the original eigenvectors
+As you can see as the number of observations increases the mean eigenvectors from the bootstrap have better agreement with the original eigenvectors
 
 Also the confidence intervals are smaller
 
