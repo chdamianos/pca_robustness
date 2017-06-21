@@ -32,10 +32,34 @@ np is the numpy library imported as 'import numpy as np'
 * Dependencies
 You will need the following Python libraries
 numpy, pandas, matplotlib, statsmodels, tqdm, sklearn
-* How to run tests
+* How to run
 See example.py 
 * Deployment instructions
 Download the source code and use as appropriate for your application
+
+### Output ###
+The code provides a visualisation of eigenvectors along with the mean and 95% confidence intervals calculated from the bootstrap process.
+
+The code could be run as:
+```
+#!python
+boot_output=PCA_bootstrap.PCA_bootstrap(data_temp,evs,n_boot_samples,confidence_interval,x_axis,plot_columns,x_label,fig_title)
+```
+data_temp is the data in a pandas dataframe where the rows are observations and columns represent the variables you would like to perform the analysis on.
+
+evs are the eigenvectors extracted using PCA
+
+n_boot_sample is the number of bootstrap samples to run
+confidence_interval is confidence interval i.e. 0.95 corresponds to a 95% confidence interval
+
+x_axis is the vector of values to be plotted on the x-axis
+
+plot_columns is the number of columns to use in the subplots
+
+x_label is the label to be used for the x-axis of the plots
+
+fig_title is the title of the plot
+
 
 ### Who do I talk to? ###
 * Damianos Christophides
