@@ -65,8 +65,15 @@ boot_output is a multidimensional array holding the data of the eigenvectors der
 
 Below you can see an example of the graphical output
 
-![example.png](https://bitbucket.org/repo/5qdo54A/images/4188597159-example.png)
+![example n=100.png](https://bitbucket.org/repo/5qdo54A/images/2012215361-example%20n=100.png)
 
+![example n=300.png](https://bitbucket.org/repo/5qdo54A/images/3031254283-example%20n=300.png)
+
+![example n=450.png](https://bitbucket.org/repo/5qdo54A/images/1293509323-example%20n=450.png)
+
+As you can see as the number of observations increases the mean eigenvector from the bootstrap has better agreement with the original eigenvectors
+
+Also the confidence intervals are smaller
 For more information go through example.py
 ### Who do I talk to? ###
 * Damianos Christophides
