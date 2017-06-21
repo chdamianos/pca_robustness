@@ -45,7 +45,7 @@ The code could be run as:
 #!python
 boot_output=PCA_bootstrap.PCA_bootstrap(data_temp,evs,n_boot_samples,confidence_interval,x_axis,plot_columns,x_label,fig_title)
 ```
-data_temp is the data in a pandas dataframe where the rows are observations and columns represent the variables you would like to perform the analysis on.
+data_temp is the data in a pandas dataframe where the rows are observations and columns represent the variables you would like to perform the analysis on
 
 evs are the eigenvectors extracted using PCA
 
