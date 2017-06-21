@@ -67,7 +67,7 @@ Below you can see an example of the graphical output
 
 ![example.png](https://bitbucket.org/repo/5qdo54A/images/4188597159-example.png)
 
-For more information run example.py
+For more information go through example.py
 ### Who do I talk to? ###
 * Damianos Christophides
 * chdamianos@gmail.com
