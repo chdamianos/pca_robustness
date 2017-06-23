@@ -32,8 +32,23 @@ where 'data' is the dataframe,
 np is the numpy library imported as 'import numpy as np'
 
 * Dependencies:
-You will need the following Python libraries
-numpy, pandas, matplotlib, statsmodels, tqdm, sklearn
+
+You will need the following:
+
+Python 2.7.13 64bit
+
+numpy 1.11.3
+
+pandas 0.19.2
+
+matplotlib 2.0.0
+
+statsmodels 0.6.1
+ 
+tqdm 4.11.2
+
+scikit-learn 0.18.1
+
 * How to run:
 See example.py 
 * Deployment instructions:
