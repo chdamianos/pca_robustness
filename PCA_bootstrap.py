@@ -3,17 +3,18 @@ def PCA(arr,thre):
     # PCA implementation
     
     import numpy as np    
-    #Centralise
+    # Centre the data
     mean_arr=np.mean(arr,axis=0)
     arr_central=arr-mean_arr
-    #Covariance matrix
+    # Calculate covariance matrix
     m,n=np.shape(arr_central)
-    cov_matrix=(1.0/m)*np.dot(arr_central.T,arr_central)
-    #SVD
+    cov_matrix=(1.0/(m-1.0))*np.dot(arr_central.T,arr_central)
+    # Perform singular value decomposition to derive eigenvectors and eigenvalues
     u,s,v=np.linalg.svd(cov_matrix)
-    
+    # Tranform data to derive principal compoenents
     PC=np.dot(arr_central,u)
     EigenVectors=u
+    # Calculate cumulative explained variance from eigenvalues
     explained_variance=s/np.sum(s)
     explained_variance=np.cumsum(explained_variance)
     thre_idx=np.where(explained_variance>=thre)[0][0]
@@ -35,12 +36,17 @@ def conf_interval(arr,alpha):
     # Calculation of confidence intervals from distribution of eigenvector values
     # and calculation of mean
     count_=0
-    for column in arr.T:         
+    for column in arr.T:   
+        # Calculate empirical cumulative distribution function for each variable
+        # i.e column in the dataset
         ecdf = sm.distributions.ECDF(column)
         x = np.linspace(np.min(column), np.max(column),num=len(column))
         y=ecdf(x)
+        # From the ecdf calculated confidence intervals based on alpha value 
+        # using interpolation
         lower_val[count_]=np.interp(alpha/2., y, x)
         upper_val[count_]=np.interp(1.0-(alpha/2.), y, x)
+        # Calculate mean value
         mean_val[count_]=np.mean(column)
         count_=count_+1
         
@@ -72,10 +78,9 @@ def PCA_bootstrap(data,evs,n_boots,ci_,x,plot_cols,x_lbl,tlt):
         # Perform PCA
         PCs_, EV_, exp_var_,mean_arr_ = PCA(np.array(arr_sample),0.99999)
         for j in range(cols):
-            # If necessary invert eigenvectors so all point in the same direction
-            # based on their maximum magnitude
-            sign_evs_idx=np.argmax(np.abs(evs[:,j]))
-      
+            # If necessary invert eigenvectors so they are pointing in the same 
+            # direction based on their maximum magnitude
+            sign_evs_idx=np.argmax(np.abs(evs[:,j]))      
             if np.sign(evs[sign_evs_idx,j]) == np.sign(EV_[sign_evs_idx,j]):
                 empty_boot[j,:,i]=EV_[:,j]
             else:
