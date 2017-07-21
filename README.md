@@ -26,8 +26,6 @@ scikit-learn 0.18.1
   'mean_vector' is the mean vector used to centralise the data  
   np is the numpy library imported as 'import numpy as np'  
 # How to run
-See example.py  
-# Output
 The code provides a visualisation of eigenvectors along with the mean and 95% (or otherwise defined) confidence intervals calculated from the bootstrap process.  
 
 The code can be run as:  
@@ -45,6 +43,8 @@ boot_output=PCA_bootstrap.PCA_bootstrap(data_temp,evs,n_boot_samples,confidence_
 'fig_title' is the title of the plot  
 'boot_output' is a multidimensional array holding the data of the eigenvectors derived during the bootstrap process  
 
+For more details see example.py  
+# Output
 Below you can see an example of the graphical output  
 ![example n=100.png](https://bitbucket.org/repo/5qdo54A/images/2012215361-example%20n=100.png)  
 ![example n=300.png](https://bitbucket.org/repo/5qdo54A/images/3031254283-example%20n=300.png)  
