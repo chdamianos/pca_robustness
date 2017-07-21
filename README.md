@@ -1,8 +1,7 @@
 # Summary
 This repository holds code for a method of using bootstrap to test the robustness of PCA  
 This algorithm has been presented at the 36th Congress of the European Society for Radiotherapy and Oncology  
-Citation: Christophides D, Gilbert A, Appelt AL, Fenwick J, Lilley J, Sebag-Montefiore D. OC-0255: Practical use of principal component analysis in radiotherapy planning. Radiother Oncol 2017;123:S129â€“30. doi:10.1016/S0167-8140(17)30698-9.
-Version 1.0  
+Citation: Christophides D, Gilbert A, Appelt AL, Fenwick J, Lilley J, Sebag-Montefiore D. OC-0255: Practical use of principal component analysis in radiotherapy planning. Radiother Oncol 2017;123:S129–30. doi:10.1016/S0167-8140(17)30698-9.  
 # Setup
 To run the code you will need Python 2.7.13 (64bit) with the following modules installed:  
 numpy 1.11.3  
