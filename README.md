@@ -55,4 +55,3 @@ For more information go through example.py
 
 # Further Information
 Contact Damianos Christophides at chdamianos@gmail.com
-* chdamianos@gmail.com
