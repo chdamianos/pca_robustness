@@ -2,9 +2,6 @@
 This repository holds code for a method of using bootstrap to test the robustness of PCA  
 Version 1.0  
 # Setup
-### Summary of set up
-To run the code you will need Python installed
-### Configuration
 To run the code you will need Python 2.7.13 (64bit) with the following modules installed:  
 numpy 1.11.3  
 pandas 0.19.2  
@@ -16,10 +13,10 @@ scikit-learn 0.18.1
 1. Prepare your data in a pandas dataframe where the rows are observations and columns represent the variables you would like to perform the analysis on.  
 2. Perform PCA to extract the eigenvectors. 
    You could use the provided function as:  
-   ```
-   #!python
+```
+#!python
   pcs, evs, explained_variance,mean_vector=PCA_bootstrap.PCA(np.array(data),0.98)
-  ```  
+```  
   where 'data' is the dataframe, 
   0.98 is the explained variance ratio threshold used to keep only an n-number of eigenvectors  
   'pcs' are the principal components for each observation  
