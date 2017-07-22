@@ -2,6 +2,12 @@
 """
 code author: Damianos Christophides 
 email: chdamianos@gmail.com
+This method has been presented at the 36th Congress of the European Society 
+for Radiotherapy and Oncology
+Citation: Christophides D, Gilbert A, Appelt AL, Fenwick J, Lilley J, 
+Sebag-Montefiore D. OC-0255: Practical use of principal component analysis in 
+radiotherapy planning. Radiother Oncol 2017;123:S129–30.
+doi:10.1016/S0167-8140(17)30698-9. 
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -54,8 +60,9 @@ for sz in sample_size:
     data_temp = data.copy()
     data_temp = data_temp.sample(n=sz)
     fig_title = 'Number of observations: {}'.format(sz)
-    boot_output = PCA_bootstrap.PCA_bootstrap(data_temp, evs, n_boot_samples, confidence_interval,
-                                              x_axis, plot_columns, x_label, fig_title)
+    boot_output = PCA_bootstrap.PCA_bootstrap(data_temp, evs, x_axis, x_label,
+                                              fig_title, n_boot_samples,
+                                              confidence_interval, plot_columns)
 
 #----------------------------------------------------------------------
 # Out of interest, plot first 2 prinipal components from spectral sample
@@ -75,7 +82,8 @@ labels = est_clusters.labels_
 
 plt.figure()
 ax = plt.subplot(111)
-ax.scatter(pcs[:, 0], pcs[:, 1], c=labels.astype(np.float))
+ax.scatter(pcs[:, 0], pcs[:, 1], c=labels.astype(
+    np.float), cmap=plt.get_cmap('viridis'))
 ax.set_xlabel('PC1')
 ax.set_ylabel('PC2')
 ax.set_title('K-Means clusters of first two principal components')

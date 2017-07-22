@@ -1,6 +1,12 @@
 """
 code author: Damianos Christophides 
 email: chdamianos@gmail.com
+This method has been presented at the 36th Congress of the European Society 
+for Radiotherapy and Oncology
+Citation: Christophides D, Gilbert A, Appelt AL, Fenwick J, Lilley J, 
+Sebag-Montefiore D. OC-0255: Practical use of principal component analysis in 
+radiotherapy planning. Radiother Oncol 2017;123:S129:30.
+doi:10.1016/S0167-8140(17)30698-9. 
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -84,7 +90,7 @@ def conf_interval(arr, alpha):
     return mean_val, lower_val, upper_val
 
 
-def PCA_bootstrap(data, evs, n_boots, ci_, x, plot_cols, x_lbl, tlt):
+def PCA_bootstrap(data, evs, x, x_lbl, tlt, n_boots=100, ci_=0.95, plot_cols=2):
     """
     Function to peform eigenvector bottstrap confidence analysis
     Input: data: dataframe with observations as rows, evs: original eigenvectors,
@@ -121,6 +127,9 @@ def PCA_bootstrap(data, evs, n_boots, ci_, x, plot_cols, x_lbl, tlt):
             # If necessary invert eigenvectors so they are pointing in the same
             # direction based on their maximum magnitude
             sign_evs_idx = np.argmax(np.abs(evs[:, j]))
+            # Note that using the maximum amplitude may not be suitable for all cases
+            # instead use the index of a peak or trough in the original eigenvectors
+            # relevant to your analysis
             if np.sign(evs[sign_evs_idx, j]) == np.sign(EV_[sign_evs_idx, j]):
                 empty_boot[j, :, i] = EV_[:, j]
             else:
