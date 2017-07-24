@@ -18,7 +18,7 @@ scikit-learn 0.18.1
 #!python
   pcs, evs, explained_variance,mean_vector=PCA_bootstrap.PCA(np.array(data),0.98)
 ```  
-  where 'data' is the dataframe, 
+  where 'data' is the dataframe,  
   0.98 is the explained variance ratio threshold used to keep only an n-number of eigenvectors  
   'pcs' are the principal components for each observation  
   'evs' are the eigenvectors  
@@ -34,7 +34,7 @@ The code can be run as:
 boot_output=PCA_bootstrap.PCA_bootstrap(data_temp,evs,n_boot_samples,confidence_interval,x_axis,plot_columns,x_label,fig_title)
 ```
 'data_temp' is the data in a pandas dataframe where the rows are observations and columns represent the variables you would like to perform the analysis on  
-'evs' are the eigenvectors extracted using PCA
+'evs' are the eigenvectors extracted using PCA  
 'n_boot_sample' is the number of bootstrap samples to run  
 'confidence_interval' is the confidence interval i.e. 0.95 corresponds to a 95% confidence interval  
 'x_axis' is the vector of values to be plotted on the x-axis  
