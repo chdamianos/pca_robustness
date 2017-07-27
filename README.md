@@ -3,7 +3,7 @@ This repository holds code for a method of using bootstrap to test the robustnes
 This algorithm has been presented at the 36th Congress of the European Society for Radiotherapy and Oncology  
 Citation: Christophides D, Gilbert A, Appelt AL, Fenwick J, Lilley J, Sebag-Montefiore D. OC-0255: Practical use of principal component analysis in radiotherapy planning. Radiother Oncol 2017;123:S129–30. doi:10.1016/S0167-8140(17)30698-9.  
 # Setup
-To run the code you will need Python 2.7.13 (64bit) with the following modules installed:  
+The code was developed using Python 2.7.13 (64bit) with the following modules installed:  
 numpy 1.11.3  
 pandas 0.19.2  
 matplotlib 2.0.0  
@@ -52,7 +52,8 @@ Below you can see an example of the graphical output
 
 As you can see as the number of observations increases the mean eigenvectors from the bootstrap have better agreement with the original eigenvectors  
 Also the 95% confidence intervals get smaller  
-For more information go through example.py  
+
+It is recommended to go through the code and comments in example.py to understand how the algorithm is implemented  
 
 # Further Information
 Contact Damianos Christophides at chdamianos@gmail.com
