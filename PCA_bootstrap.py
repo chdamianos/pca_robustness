@@ -41,9 +41,13 @@ def PCA(arr, thre):
     cov_matrix = (1.0 / (m - 1.0)) * np.dot(arr_central.T, arr_central)
     # Perform singular value decomposition to derive eigenvectors and eigenvalues
     u, s, v = np.linalg.svd(cov_matrix)
+    assert np.allclose(cov_matrix, np.dot(u * s, v))
     # Tranform data to derive principal compoenents
-    PC = np.dot(arr_central, u)
-    EigenVectors = u
+    # it doesn't matter if you use u or v since one is the inverse rotation of the other
+    # it's like saying that rotation of +35o is different from -35o
+    # see diagram in https://en.wikipedia.org/wiki/Singular_value_decomposition
+    EigenVectors = v
+    PC = np.dot(arr_central, EigenVectors)
     # Calculate cumulative explained variance from eigenvalues
     explained_variance = s / np.sum(s)
     explained_variance = np.cumsum(explained_variance)
